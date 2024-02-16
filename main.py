@@ -12,6 +12,8 @@ root.geometry("800x750")
 
 pygame.mixer.init()
 
+# Colors
+ROSE='#FF00E8'
 
 # Get Song Time Infos
 def play_time():
@@ -253,5 +255,9 @@ status_bar.pack(fill=X, side=BOTTOM, ipady=2)
 my_slider = ttk.Scale(root, from_=0, to=100, orient=HORIZONTAL, value=0, length=380, command=slide)
 my_slider.pack()
 my_slider.place(x=200, y=530)
+
+# Music Cloud Label
+music_cloud = Label(root, text=" Music Cloud ", font=("CLIP", 63), fg=ROSE, bg='black', borderwidth=3, relief="groove")
+music_cloud.place(x=210, y=20)
 
 root.mainloop()
